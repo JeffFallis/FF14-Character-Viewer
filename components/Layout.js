@@ -11,11 +11,11 @@ const Layout = props => {
             </Head>
             
             <Navbar />
-            <body className="container">
+            <div className="container">
                 <main>
                     {props.children}
                 </main>
-            </body>
+            </div>
             <Footer />
 
             <style jsx>{`

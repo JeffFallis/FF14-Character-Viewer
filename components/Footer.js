@@ -10,9 +10,7 @@ const Footer = () => {
                 * {
                     text-align: center;
                 }
-            `}</style>
-
-            
+            `}</style>     
         </footer>
     );
 }
