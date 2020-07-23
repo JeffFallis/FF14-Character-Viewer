@@ -1,11 +1,11 @@
-import CharacterCard from '../components/CharacterCard';
+import MemberCard from './MemberCard';
 
 const CardList = props => {
 
-    const createCharacterCard = char => {
+    const createMemberCard = char => {
         return (
             <div className="card">
-                <CharacterCard 
+                <MemberCard 
                     characterImg={char.Avatar} 
                     characterName={char.Name} 
                     characterRank={char.Rank}
@@ -21,8 +21,11 @@ const CardList = props => {
     };
 
     return (
-        <div className="list">
-            {props.characterList.map(createCharacterCard)}
+        <div>
+            <h1><strong>Members</strong></h1>
+            <div className="list">
+                {props.memberList.map(createMemberCard)}
+            </div>
 
             <style jsx>{`
                 .list {

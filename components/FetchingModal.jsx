@@ -1,5 +1,5 @@
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import Spinner from 'react-bootstrap/Spinner';
 
 const FetchingModal = props => {
 
@@ -14,10 +14,12 @@ const FetchingModal = props => {
                 <Modal.Body>
                     <div className="container">
                         <div className="center">
-                            <h2>Fetching Free Company data...</h2>
+                            <h2>Gathering data...</h2>
                         </div>
                         <div className="center">
-                            <Button variant="warning" onClick={closeModal}>This may take a moment</Button>  
+                            <Spinner animation="border" role="status">
+                                <span className="sr-only">Loading...</span>
+                            </Spinner>  
                         </div>
                     </div>
                 </Modal.Body>

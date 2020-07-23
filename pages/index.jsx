@@ -28,7 +28,8 @@ const Index = props => {
   }
 
   // Fetch character by name in order to obtain Lodestone ID
-  const fetchName = () => {
+  const fetchName = e => {
+    e.preventDefault();
     setFetching(true);
     fetch("https://xivapi.com/character/search?name=" + name, {
       method: 'GET',
@@ -59,6 +60,7 @@ const Index = props => {
           setProfile(tmpData);
           setLoaded(true);
           setFetching(false);
+          setName("");
         })
       })
       .catch(function(error) {
@@ -71,7 +73,6 @@ const Index = props => {
       <div>
         <CharacterSearch name={name} handleChange={handleChange} fetchName={fetchName}/>
         {loaded ? <Profile profile={profile}/> : null}
-
         <FetchingModal fetching={fetching} setFetching={setFetching} />
 
         <style jsx>{`

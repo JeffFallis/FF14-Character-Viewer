@@ -8,6 +8,7 @@ const Layout = props => {
             <Head>
                 <title>FFXIV Free Company Site</title>
                 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/slate/bootstrap.min.css"/>
+                <link rel="icon" href="../public/SymbolMoogle.svg"/>
             </Head>
             
             <Navbar />

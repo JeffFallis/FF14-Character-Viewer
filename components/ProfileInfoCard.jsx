@@ -2,9 +2,9 @@ const ProfileInfoCard = props => {
 
     return (
         <div className="profile-info">
-            <p><strong>Active members: {props.info.ActiveMemberCount}</strong></p>
-            <p><strong>Server: {props.info.Server}</strong></p>
-            <p><strong>Estate: {props.info.Estate.Name ? props.info.Estate.Name : <em>Not owned</em>}</strong></p>
+            <p><strong>Active members:</strong> {props.info.ActiveMemberCount}</p>
+            <p><strong>Server:</strong> {props.info.Server} <em>({props.info.DC})</em></p>
+            <p><strong>Estate:</strong> {props.info.Estate.Name ? props.info.Estate.Name : <em>Not owned</em>}</p>
 
             <style jsx>{`
                 .profile-info p {
