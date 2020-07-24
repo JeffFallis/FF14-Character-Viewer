@@ -3,20 +3,14 @@ import MemberCard from './MemberCard';
 const CardList = props => {
 
     const createMemberCard = char => {
-        return (
-            <div className="card">
-                <MemberCard 
-                    characterImg={char.Avatar} 
-                    characterName={char.Name} 
-                    characterRank={char.Rank}
-                />
-
-                <style jsx>{`
-                    .card {
-                        margin-right: 10px;
-                    }
-                `}</style>
-            </div>
+        return (  
+            <MemberCard 
+                characterImg={char.Avatar} 
+                characterName={char.Name} 
+                characterRank={char.Rank}
+                characterId={char.ID}
+                key={char.ID.toString()}
+            />
         );
     };
 

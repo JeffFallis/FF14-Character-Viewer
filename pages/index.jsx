@@ -2,8 +2,6 @@ import CharacterSearch from '../components/CharacterSearch';
 import FetchingModal from '../components/FetchingModal';
 import Layout from '../components/Layout';
 import Profile from '../components/Profile';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import { useState, useEffect, useRef } from 'react';
 
 const Index = props => {
@@ -56,7 +54,6 @@ const Index = props => {
       .then(res => {
         res.text().then(info => {
           let tmpData = JSON.parse(info);
-          console.log(tmpData.FreeCompany);
           setProfile(tmpData);
           setLoaded(true);
           setFetching(false);
